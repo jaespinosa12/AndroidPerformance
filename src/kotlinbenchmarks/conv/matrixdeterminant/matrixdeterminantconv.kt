@@ -1,3 +1,7 @@
+/**
+ * Based on the "Matrix Operations in Java" code by Ata Amini
+ * https://www.codeproject.com/Articles/405128/Matrix-Operations-in-Java
+ */
 private class Matrix {
 
     var nrows: Int = 0
