@@ -46,24 +46,3 @@ kotlinc -include-runtime -d generated/NBodyKtConv.jar kotlinbenchmarks/conv/nbod
 
 echo ' - Compile Spectral Norm Kt Converted'
 kotlinc -include-runtime -d generated/SpectralNormKtConv.jar kotlinbenchmarks/conv/spectralnorm/*.kt
-
-
-echo 'Compiling Kotlin Idiom'
-
-echo ' - Compile Binary Trees Kt Idiomatic'
-kotlinc -include-runtime -d generated/BinaryTreesKtIdiom.jar kotlinbenchmarks/idiom/binarytrees/*.kt
-
-echo ' - Compile Fannkuch Redux Kt Idiomatic'
-kotlinc -include-runtime -d generated/FannkuchReduxKtIdiom.jar kotlinbenchmarks/idiom/fannkuchredux/*.kt
-
-echo ' - Compile Fasta Kt Idiomatic'
-kotlinc -include-runtime -d generated/FastaKtIdiom.jar kotlinbenchmarks/idiom/fasta/*.kt
-
-echo ' - Compile Mandelbrot Kt Idiomatic'
-kotlinc -include-runtime -d generated/MandelbrotKtIdiom.jar kotlinbenchmarks/idiom/mandelbrot/*.kt
-
-echo ' - Compile NBody Kt Idiomatic'
-kotlinc -include-runtime -d generated/NBodyKtIdiom.jar kotlinbenchmarks/idiom/nbody/*.kt
-
-echo ' - Compile Spectral Norm Kt Idiomatic'
-kotlinc -include-runtime -d generated/SpectralNormKtIdiom.jar kotlinbenchmarks/idiom/spectralnorm/*.kt
