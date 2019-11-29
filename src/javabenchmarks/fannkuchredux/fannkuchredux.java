@@ -1,5 +1,3 @@
-package javabenchmarks.fannkuchredux;
-
 /*
  * The Computer Language Benchmarks Game
  * https://salsa.debian.org/benchmarksgame-team/benchmarksgame/
@@ -151,7 +149,7 @@ public final class fannkuchredux implements Runnable {
         int nthreads = Runtime.getRuntime().availableProcessors();
         Thread[] threads = new Thread[nthreads];
         for (int i = 0; i < nthreads; ++i) {
-            threads[i] = new Thread(new fannkuchreduxjava());
+            threads[i] = new Thread(new fannkuchredux());
             threads[i].start();
         }
         for (Thread t : threads) {

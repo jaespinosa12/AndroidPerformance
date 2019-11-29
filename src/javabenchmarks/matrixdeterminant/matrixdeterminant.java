@@ -87,10 +87,20 @@ public class matrixdeterminant {
             return X_;
         }
 
-        public void fillMatrix(){
+        public void fillRandom(){
             for (int i = 0; i < nrows; i++){
                 for (int j = 0; j < ncols; j++){
                     data[i][j] = (Math.random() * ((10000 - 0) + 1)) + 0;
+                }
+            }
+        }
+        
+        public void fillMatrix(){
+            int cont = 1;
+            for(int i =0; i < nrows ;i++){
+                for(int j = 0; j < ncols ; j++){
+                    data[i][j] = cont;
+                    cont++;
                 }
             }
         }
@@ -142,11 +152,12 @@ public class matrixdeterminant {
         }
     }
     public static void main(final String[] args) throws Exception {
-        System.out.println("Creating new Matrix");
-        Matrix matrix = new Matrix(10, 10);
-        System.out.println("Matrix created");
-        matrix.fillMatrix();
-        System.out.println("Matrix filled");
-        System.out.println("Matrix determinant is:" + Matrix.determinant(matrix));
+        int size = Integer.parseInt(args[0]);
+        Matrix matrix1 = new Matrix(size, size);
+        Matrix matrix2 = new Matrix(size,size);
+        matrix1.fillRandom();
+        matrix2.fillMatrix();
+        System.out.println(Matrix.determinant(matrix1));
+        System.out.println(Matrix.determinant(matrix2));
     }
 }
